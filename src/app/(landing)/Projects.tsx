@@ -3,13 +3,13 @@ import { useState } from "react";
 
 const projects = [
   { img: "pic.jpg", title: "Inclusive Education Reform" },
-  { img: "pic.jpg", title: "Climate Resilient Agriculture" },
-  { img: "pic.jpg", title: "Digital Health Systems" },
-  { img: "pic.jpg", title: "Community Peacebuilding" },
-  { img: "pic.jpg", title: "Energy Transition Strategy" },
-  { img: "pic.jpg", title: "Gender Equality Advocacy" },
-  { img: "pic.jpg", title: "Migration & Policy Research" },
-  { img: "pic.jpg", title: "Youth Leadership Initiative" },
+  { img: "banner.webp", title: "Climate Resilient Agriculture" },
+  { img: "shared.webp", title: "Digital Health Systems" },
+  { img: "plant.webp", title: "Community Peacebuilding" },
+  { img: "GBV.webp", title: "Energy Transition Strategy" },
+  { img: "wri.webp", title: "Gender Equality Advocacy" },
+  { img: "spruce.webp", title: "Migration & Policy Research" },
+  { img: "G.webp", title: "Youth Leadership Initiative" },
 ];
 
 export default function Projects() {
