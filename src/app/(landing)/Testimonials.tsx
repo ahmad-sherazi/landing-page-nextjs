@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import "../globals.css";
 
 const testimonials = [
   {
@@ -23,40 +24,22 @@ export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
   return (
-    <section
-      className="relative bg-gray-900 text-white py-20 px-6 md:px-12 flex items-center justify-center"
-      style={{
-        backgroundImage: "url('/bgpic.webp')", // ✅ directly from public
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="max-w-5xl text-left">
-        {/* Quote icon + Text */}
-        <div className="flex items-start gap-6">
-          <span className="text-orange-500 text-6xl font-bold">“</span>
-          <p className="text-lg md:text-xl leading-relaxed">
-            {testimonials[current].quote}
-          </p>
+    <section className="testimonials-section">
+      <div className="container">
+        <div className="quote-container">
+          <span className="quote-mark">“</span>
+          <p className="quote-text">{testimonials[current].quote}</p>
         </div>
-
-        {/* Author */}
-        <div className="mt-8">
-          <p className="text-orange-500 font-bold">
-            {testimonials[current].name}
-          </p>
-          <p className="text-gray-300 text-sm">{testimonials[current].role}</p>
+        <div className="author">
+          <p className="author-name">{testimonials[current].name}</p>
+          <p className="author-role">{testimonials[current].role}</p>
         </div>
-
-        {/* Dots Navigation */}
-        <div className="flex gap-3 mt-8">
+        <div className="dots">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition ${
-                current === i ? "bg-white" : "bg-gray-500"
-              }`}
+              className={`dot ${current === i ? "active" : ""}`}
             />
           ))}
         </div>

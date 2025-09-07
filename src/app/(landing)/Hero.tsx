@@ -1,34 +1,15 @@
+"use client";
+import "../globals.css";
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-screen bg-cover bg-center flex items-center"
-      style={{ backgroundImage: "url('/banner.webp')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6 py-20 md:mt-18 flex items-center">
-        <div className="w-full md:w-2/3 lg:w-1/2">
-          <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-white leading-snug">
-            We help people work together
-            <br />
-            across differences to achieve
-            <br />
-            system change
-          </h1>
-
-          <p className="mt-6 text-base md:text-xl text-gray-200 leading-relaxed">
-            In our ever-changing world, traditional approaches to addressing
-            crucial societal problems are becoming increasingly obsolete.
-          </p>
-
-          <a
-            href="#contact"
-            className="mt-8 inline-block bg-orange-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-yellow-300 hover:text-black transition"
-          >
-            Learn more →
-          </a>
-        </div>
+    <section className="hero">
+      <div className="overlay"></div>
+      <div className="hero-content">
+        <h1>We help people work together across differences to achieve system change</h1>
+        <p>In our ever-changing world, traditional approaches to addressing crucial societal problems are becoming increasingly obsolete.</p>
+        <a href="#contact" className="button">Learn more →</a>
       </div>
     </section>
   );
