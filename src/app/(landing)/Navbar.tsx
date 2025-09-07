@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Search, Globe } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,10 +22,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <img
+        <Image
           src="/logo.svg"
-          alt="Logo"
+          alt="Company Logo"
+          width={120}
+          height={40}
           className="h-8 w-auto transition duration-300"
+          priority
         />
 
         {/* Navigation + Right Section */}

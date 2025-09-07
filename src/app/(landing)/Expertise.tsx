@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 
 export default function Expertise() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -45,7 +46,8 @@ export default function Expertise() {
       <div className="max-w-7xl mx-auto text-center relative">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-red-900">
-          Walking alongside you to address<br />
+          Walking alongside you to address
+          <br />
           society’s most pressing challenges
         </h2>
         <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
@@ -54,20 +56,20 @@ export default function Expertise() {
         </p>
 
         {/* Arrows */}
-     <div className="flex justify-center gap-4 mt-8">
-  <button
-    onClick={() => scroll("left")}
-    className="w-12 h-12 rounded-full bg-gray-200 text-black flex items-center justify-center font-bold text-lg hover:bg-orange-500 hover:text-white shadow-lg transition"
-  >
-    ←
-  </button>
-  <button
-    onClick={() => scroll("right")}
-    className="w-12 h-12 rounded-full bg-gray-200 text-black flex items-center justify-center font-bold text-lg hover:bg-orange-500 hover:text-white shadow-lg transition"
-  >
-    →
-  </button>
-</div>
+        <div className="flex justify-center gap-4 mt-8">
+          <button
+            onClick={() => scroll("left")}
+            className="w-12 h-12 rounded-full bg-gray-200 text-black flex items-center justify-center font-bold text-lg hover:bg-orange-500 hover:text-white shadow-lg transition"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="w-12 h-12 rounded-full bg-gray-200 text-black flex items-center justify-center font-bold text-lg hover:bg-orange-500 hover:text-white shadow-lg transition"
+          >
+            →
+          </button>
+        </div>
 
         {/* Scrollable Row */}
         <div
@@ -82,7 +84,6 @@ export default function Expertise() {
             { img: "gender.webp", title: "Gender-based Violence" },
             { img: "health.webp", title: "Health" },
             { img: "right.svg", title: "Justice" },
-            // { img: "", title: "Migration" },
             { img: "peace.svg", title: "Peace & Security" },
             { img: "info.svg", title: "Technology" },
           ].map((item, i) => (
@@ -90,9 +91,11 @@ export default function Expertise() {
               key={i}
               className="min-w-[220px] bg-white border rounded-lg p-6 flex flex-col items-center transition-transform duration-300 ease-out hover:scale-105 hover:shadow-2xl"
             >
-              <img
+              <Image
                 src={`/${item.img}`}
                 alt={item.title}
+                width={64}
+                height={64}
                 className="w-16 h-16 object-contain"
               />
               <p className="mt-4 font-semibold text-slate-900">{item.title}</p>

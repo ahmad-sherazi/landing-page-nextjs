@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
   { img: "pic.jpg", title: "Inclusive Education Reform" },
@@ -79,11 +80,13 @@ export default function Projects() {
                 key={i}
                 className="min-w-[280px] max-w-[280px] mx-2 bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-2xl transition-transform duration-300 ease-out hover:scale-105"
               >
-                <img
-  src={`/${item.img}`} // ✅ no /images/projects
-  alt={item.title}
-  className="w-full h-48 object-cover"
-/>
+                <Image
+                  src={`/${item.img}`}
+                  alt={item.title}
+                  width={280}
+                  height={192}
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-6 text-left">
                   <h3 className="text-xl font-semibold text-slate-900">
                     {item.title}
