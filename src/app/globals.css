@@ -33,3 +33,6 @@ body {
   -ms-overflow-style: none;  /* IE & Edge */
   scrollbar-width: none;     /* Firefox */
 }
+html {
+  font-family: system-ui, sans-serif;
+}
