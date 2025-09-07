@@ -1,4 +1,5 @@
 // src/app/(landing)/page.tsx
+export const dynamic = "force-dynamic";
 import Hero from './Hero';
 import Navbar from './Navbar';
 import Systemic from './Systemic';
